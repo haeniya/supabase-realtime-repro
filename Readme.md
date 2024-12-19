@@ -16,3 +16,9 @@
 8. Reopen the app (e.g. by clicking "a" in the Terminal to open again in the Android emulator)
 9. In the app, you should still be logged in but when sending messages, they won't appear in the list. Although they are stored in the database.
 8. When signing out and signin in again, the realtime channel works again until the app is closed again.
+
+Note:
+After some investigation, it seems to be related to RLS policies. Without any policies on the table, the real-time channels are working fine. As soon as I add two standard policies for INSERT and SELECT, the issue comes up.
+
+Video:
+https://youtube.com/shorts/DXeU3AywDJI?feature=share
